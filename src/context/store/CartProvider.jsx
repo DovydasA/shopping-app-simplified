@@ -1,13 +1,9 @@
-import { useState, useReducer } from "react";
+import { useReducer } from "react";
 import CartContext from "./CartContext";
 import cartReducer from "./CartReducer";
 
 export default function CartContextProvider({ children }) {
 	const [cartState, dispatchCartAction] = useReducer(cartReducer, {
-		items: [],
-	});
-
-	const [shoppingCart, setShoppingCart] = useState({
 		items: [],
 	});
 
